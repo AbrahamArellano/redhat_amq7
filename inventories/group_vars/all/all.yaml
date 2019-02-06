@@ -48,7 +48,7 @@ amq_broker_admin:
   role: admins
 
 # Additional AMQ users
-amq_broker_user: 
+amq_broker_users: 
   - name: "{{ vault_amq_monitoring.user }}"
     password: "{{ vault_amq_monitoring.password }}"
     role: view
