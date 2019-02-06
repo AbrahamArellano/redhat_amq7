@@ -22,8 +22,8 @@ amq_broker_log_dir: /var/amq/log
 
 # OS User to install/execute AMQ
 user:
-  name: 'amq'
-  group: 'amq'
+  name: "{{ vault_os_amq.user }}"
+  group: "{{ vault_os_amq.group }}"
   shell: '/bin/bash'
   homedir: 'True'
 
@@ -43,15 +43,15 @@ amq_broker_name: broker
 
 # Primary admin user and role with which the broker is created
 amq_broker_admin:
-  name: fappricing
+  name: "{{ vault_amq_broker_admin.user }}"
   password: "{{ vault_amq_broker_admin.password }}"
   role: admins
 
-# Messaging users
-amq_broker_users:
-  name: jboss
-  password: "{{ vault_amq_broker_users.password }}"
-  role: users
+# Monitoring user
+amq_monitor_user: 
+  name: "{{ vault_amq_monitoring.user }}"
+  password: "{{ vault_amq_monitoring.password }}"
+  role: view
 
 
 ##### AMQ configuration
@@ -68,8 +68,15 @@ amq_broker_users:
 #   - browse
 #   - send
 #   - manage
-amq_broker_roles:
-  - name: users
+amq_broker_roles_permissions: 
+  - name: admins
+    admin: True
+    permissions:
+      - browse
+      - consume
+      - send
+  - name: view
+    admin: False
     permissions:
       - browse
       - consume
@@ -96,4 +103,7 @@ global_max_size: 2GB
 journal_compact_on: True
 journal_compact_min_files: 10
 journal_compact_percentage: 30
+
+# Console access
+amq_custom_console_access: True
 
