@@ -47,11 +47,11 @@ amq_broker_admin:
   password: "{{ vault_amq_broker_admin.password }}"
   role: admins
 
-# Monitoring user
-amq_monitor_user: 
-  name: "{{ vault_amq_monitoring.user }}"
-  password: "{{ vault_amq_monitoring.password }}"
-  role: view
+# Additional AMQ users
+amq_broker_user: 
+  - name: "{{ vault_amq_monitoring.user }}"
+    password: "{{ vault_amq_monitoring.password }}"
+    role: view
 
 
 ##### AMQ configuration
