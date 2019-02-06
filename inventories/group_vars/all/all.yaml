@@ -84,8 +84,8 @@ amq_broker_roles_permissions:
 
 # Clustering
 amq_broker_clustered: True
-amq_broker_cluster_user: amq
-amq_broker_cluster_password: "amq"
+amq_broker_cluster_user: "{{ vault_amq_broker_cluster.user }}"
+amq_broker_cluster_password: "{{ vault_amq_broker_cluster.password }}"
 amq_broker_cluster_maxhops: 0
 amq_broker_cluster_load_balancing_policy: ON_DEMAND
 amq_broker_cluster_discovery: False

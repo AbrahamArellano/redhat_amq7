@@ -15,3 +15,8 @@ vault_os_amq:
   group: amq
   remote_user: amq
   become_user: amq
+  
+# Cluster user
+amq_broker_cluster: 
+  user: amq
+  password: amq
