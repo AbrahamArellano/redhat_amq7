@@ -79,8 +79,6 @@ amq_broker_roles_permissions:
     admin: False
     permissions:
       - browse
-      - consume
-      - send
 
 # Clustering
 amq_broker_clustered: True
