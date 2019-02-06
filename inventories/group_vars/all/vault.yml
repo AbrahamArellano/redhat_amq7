@@ -17,6 +17,6 @@ vault_os_amq:
   become_user: amq
   
 # Cluster user
-amq_broker_cluster: 
+vault_amq_broker_cluster: 
   user: amq
   password: amq
