@@ -68,13 +68,20 @@ amq_broker_users:
 #   - browse
 #   - send
 #   - manage
-amq_broker_roles_permissions: 
+amq_broker_roles: 
   - name: admins
     admin: True
     permissions:
-      - browse
-      - consume
-      - send
+     - createNonDurableQueue
+     - deleteNonDurableQueue
+     - createDurableQueue
+     - deleteDurableQueue
+     - createAddress
+     - deleteAddress
+     - consume
+     - browse
+     - send
+     - manage
   - name: view
     admin: False
     permissions:
@@ -104,4 +111,5 @@ journal_compact_percentage: 30
 
 # Console access
 amq_custom_console_access: True
+
 
