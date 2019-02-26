@@ -16,4 +16,4 @@ amq_broker_ports:
     port: 1833
     
 delete_data_content: false
-delete_log_content: false
+delete_log_content: True
