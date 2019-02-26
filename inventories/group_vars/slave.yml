@@ -15,3 +15,6 @@ amq_broker_ports:
     port: 5545
   mqtt:
     port: 1933
+
+delete_data_content: True
+delete_log_content: True

@@ -14,3 +14,6 @@ amq_broker_ports:
     port: 5445
   mqtt:
     port: 1833
+    
+delete_data_content: false
+delete_log_content: false
