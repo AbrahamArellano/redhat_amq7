@@ -116,7 +116,7 @@ amq_custom_console_access: True
 # Rotating Size Logging
 amq_broker_logging:
   active: True
-  rotateSize: 10000
+  rotateSize: 100000000
   maxBackupIndex: 4
   debug: True
 
