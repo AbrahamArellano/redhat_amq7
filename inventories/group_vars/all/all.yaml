@@ -102,7 +102,8 @@ amq_broker_shared_storage: True
 
 ## Broker Memory Limit
 global_max_size_on: True
-global_max_size: 2GB
+global_max_size_on_update: False
+global_max_size: 10GB
 
 # Journal compact
 journal_compact_on: True
@@ -112,4 +113,10 @@ journal_compact_percentage: 30
 # Console access
 amq_custom_console_access: True
 
+# Rotating Size Logging
+amq_broker_logging:
+  active: True
+  rotateSize: 10000
+  maxBackupIndex: 4
+  debug: True
 

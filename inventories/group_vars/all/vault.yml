@@ -13,7 +13,6 @@ vault_amq_monitoring:
 vault_os_amq: 
   user: amq
   group: amq
-  remote_user: amq
   become_user: amq
   
 # TLS
