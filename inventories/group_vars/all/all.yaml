@@ -119,4 +119,3 @@ amq_broker_logging:
   rotateSize: 100000000
   maxBackupIndex: 4
   debug: True
-

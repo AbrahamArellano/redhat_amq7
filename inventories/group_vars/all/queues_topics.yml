@@ -1,0 +1,49 @@
+---
+# Queues
+amq_queues: 
+  - pricing.eqd.calc.error
+  - pricing.eqd.calc.multi.result
+  - pricing.eqd.calc.multi.work
+  - pricing.eqd.calc.result
+  - pricing.eqd.calc.work
+  - pricing.eqd.dispatch.result
+  - pricing.eqd.split.work
+  - pricing.eqd.store.work
+  - pricing.grid.work
+  - pricing.quoting.calc.error
+  - pricing.quoting.calc.result
+  - pricing.quoting.calc.work
+  - pricing.quoting.dispatch.work
+  - pricing.quoting.sst.statistics
+  - pricing.rpc.work
+  - pricing.zps.barrier.work
+  - pricing.zps.work
+  - pricing.macshan.calc.result
+  - pricing.macskif.calc.result
+
+# Topics
+amq_topics: 
+  - pricing.eqd.calc.control
+  - pricing.eqd.calc.multi.control
+  - pricing.eqd.dispatch.control
+  - pricing.eqd.join.control
+  - pricing.eqd.split.control
+  - pricing.eqd.store.control
+  - pricing.quoting.calc.control
+  - pricing.quoting.dispatch.control
+  - pricing.rpc.control
+  - pricing.grid.control
+  - pricing.macs.sender.control
+  - pricing.mac.receiver.control
+  - pricing.eqd.calc.signal
+  - pricing.eqd.calc.multi.signal
+  - pricing.eqd.dispatch.signal
+  - pricing.eqd.join.signal
+  - pricing.eqd.split.signal
+  - pricing.eqd.store.signal
+  - pricing.grid.signal
+  - pricing.quoting.calc.signal
+  - pricing.quoting.dispatch.signal
+  - pricing.rpc.signal
+  - pricing.macs.sender.signal
+  - pricing.mac.receiver.signal
