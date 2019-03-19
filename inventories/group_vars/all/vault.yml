@@ -1,8 +1,8 @@
 ---
 # Primary admin user and role with which the broker is created
 vault_amq_broker_admin:
-  user: fappricing
-  password: fappricing
+  user: amqadmin
+  password: amqadmin
 
 # Messaging users
 vault_amq_monitoring:
